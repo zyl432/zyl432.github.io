@@ -41,6 +41,17 @@
 				* doGetBean
 					* createBean
 						* Object bean = resolveBeforeInstantiation(beanName, mbdToUse); ：返回被代理类
+							* applyBeanPostProcessorsAfterInitialization  ：后置处理器，对bean进行增强
+								* beanProcessor.postProcessAfterInitialization(result, beanName);
+									* wrapIfNecessary
+										* getAdvicesAndAdvisorsForBean 获取通知
+										* createProxy：代理工厂创建代理类
+***
+# AOP调用过程：
+1. 获取拦截链
+2. 链式调用通知方法
+* 
+
 
 # AOP过程猜想：
 * 1.拦截方法
