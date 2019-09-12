@@ -1,3 +1,12 @@
+---
+title: AOP底层源码
+tags: 
+- AOP
+categories:
+- Spring
+---
+
+
 # AOP调用过程：
 * 配置类上加@EnableAspectJAutoProxy注解
 * @EnableAspectJAutoProxy注解使用了@Import(AspectJAutoProxyRegistrar.class)
