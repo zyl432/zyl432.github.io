@@ -50,7 +50,11 @@
 # AOP调用过程：
 1. 获取拦截链
 2. 链式调用通知方法
-* 
+* CglibAopProxy.DynamicAdvisedInterceptor内部类的intercept
+	* getInterceptorsAndDynamicInterceptionAdvice
+		*  this.advisorChainFactory.getInterceptorsAndDynamicInterceptionAdvice(
+					this, method, targetClass);
+* retVal = new CglibMethodInvocation(proxy, target, method, args, targetClass, chain, methodProxy).proceed();
 
 
 # AOP过程猜想：
