@@ -1,1 +1,5 @@
 theme: 3-hexo
+deploy:
+    type: git
+    repository: git@github.com:zyl432/zyl432.github.io.git
+    branch: master
