@@ -2,9 +2,9 @@
 title: static关键字
 date: 2019-9-12
 tags: 
-- javabase
+- java基础
 categories:
-- javabase
+- java基础
 ---
 
 # static

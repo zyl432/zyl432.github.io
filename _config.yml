@@ -78,6 +78,6 @@ theme: 3-hexo
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-    type: git
-    repository: git@github.com:zyl432/zyl432.github.io.git
-    branch: master
+  type: git
+  repo: git@github.com:zyl432/zyl432.github.io.git
+  branch: master
