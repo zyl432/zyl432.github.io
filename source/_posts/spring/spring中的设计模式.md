@@ -4,7 +4,7 @@ tags:
 - spring
 - 设计模式
 categories:
-- Spring
+- spring
 ---
 
 AOP调用:责任链模式
