@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>张永亮&#39;s 博客</title>
+  <meta name="keywords" content>
+  <meta name="description" content="张永亮&#39;s 博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Mybatis1、Mybatis和Hibernate的区别？    Mybatis Hibernate    ORM 半自动 全自动   SQL 需要手写sql 只需要配置表和实体的映射   优点 灵活，学习快 不需要写sql，跨平台   缺点 需要写sql，不跨平台 不够灵活，学习难度高             ##2、#{}和${}的区别 3、Spring1、Spring有哪些模块？##2、动">
+<meta name="keywords" content="框架,面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="框架面试题整理">
+<meta property="og:url" content="http://zyl432.github.io/2019/11/26/面试/框架面试题整理/index.html">
+<meta property="og:site_name" content="张永亮&#39;s 博客">
+<meta property="og:description" content="Mybatis1、Mybatis和Hibernate的区别？    Mybatis Hibernate    ORM 半自动 全自动   SQL 需要手写sql 只需要配置表和实体的映射   优点 灵活，学习快 不需要写sql，跨平台   缺点 需要写sql，不跨平台 不够灵活，学习难度高             ##2、#{}和${}的区别 3、Spring1、Spring有哪些模块？##2、动">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-26T14:31:00.846Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="框架面试题整理">
+<meta name="twitter:description" content="Mybatis1、Mybatis和Hibernate的区别？    Mybatis Hibernate    ORM 半自动 全自动   SQL 需要手写sql 只需要配置表和实体的映射   优点 灵活，学习快 不需要写sql，跨平台   缺点 需要写sql，不跨平台 不够灵活，学习难度高             ##2、#{}和${}的区别 3、Spring1、Spring有哪些模块？##2、动">
+
+
+<link rel="icon" href="/img/5945805.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/5945805.jpg" />
+</a>
+<div class="author">
+    <span>张永亮</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(36)</small></div></li>
+    
+        
+            
+            <li><div data-rel="JVM">JVM<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="java基础">java基础<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="并发编程">并发编程<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="mybatis">mybatis<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="mysql">mysql<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="spring">spring<small>(6)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="博客搭建">博客搭建<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="容器">容器<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="缓存">缓存<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="网络">网络<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="设计模式">设计模式<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="36">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">JDK的命令行工具</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">面试题</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">JVM参数</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">内存溢出</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">java基础</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">线程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">异常</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">spring</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">设计模式</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">AOP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">博客搭建</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">HashMap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">缓存</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网络基础</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">框架,面试题</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">阻塞队列</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="JVM "
+           href="/2019/10/30/JVM/JDK的命令行工具/"
+           data-tag="JDK的命令行工具"
+           data-author="" >
+            <span class="post-title" title="JDK的命令行工具">JDK的命令行工具</span>
+            <span class="post-date" title="2019-10-30 21:01:32">2019/10/30</span>
+        </a>
+        
+        <a  class="JVM "
+           href="/2019/10/30/JVM/JVM面试题/"
+           data-tag="面试题"
+           data-author="" >
+            <span class="post-title" title="JVM面试题">JVM面试题</span>
+            <span class="post-date" title="2019-10-30 20:26:03">2019/10/30</span>
+        </a>
+        
+        <a  class="JVM "
+           href="/2019/10/30/JVM/JVM参数/"
+           data-tag="JVM参数"
+           data-author="" >
+            <span class="post-title" title="JVM参数">JVM参数</span>
+            <span class="post-date" title="2019-10-30 20:40:33">2019/10/30</span>
+        </a>
+        
+        <a  class="JVM "
+           href="/2019/10/28/JVM/内存溢出/"
+           data-tag="内存溢出"
+           data-author="" >
+            <span class="post-title" title="内存溢出">内存溢出</span>
+            <span class="post-date" title="2019-10-28 19:42:39">2019/10/28</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/13/linux/命令/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-11-13 22:07:11">2019/11/13</span>
+        </a>
+        
+        <a  class="java基础 "
+           href="/2019/09/12/javabase/static/"
+           data-tag="java基础"
+           data-author="" >
+            <span class="post-title" title="static关键字">static关键字</span>
+            <span class="post-date" title="2019-09-12 00:00:00">2019/09/12</span>
+        </a>
+        
+        <a  class="并发编程 "
+           href="/2019/09/12/multiThread/threadLifeCycle/"
+           data-tag="线程"
+           data-author="" >
+            <span class="post-title" title="线程的生命周期">线程的生命周期</span>
+            <span class="post-date" title="2019-09-12 21:26:46">2019/09/12</span>
+        </a>
+        
+        <a  class="mybatis "
+           href="/2019/09/18/mybatis/binding模块/"
+           data-tag="mybatis"
+           data-author="" >
+            <span class="post-title" title="binding模块">binding模块</span>
+            <span class="post-date" title="2019-09-18 21:57:30">2019/09/18</span>
+        </a>
+        
+        <a  class="java基础 "
+           href="/2019/10/11/javabase/异常/"
+           data-tag="异常"
+           data-author="" >
+            <span class="post-title" title="异常">异常</span>
+            <span class="post-date" title="2019-10-11 20:32:22">2019/10/11</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/10/springboot/Springboot优点/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-11-10 13:22:06">2019/11/10</span>
+        </a>
+        
+        <a  class="mysql "
+           href="/2019/09/12/mysql/index/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql">mysql</span>
+            <span class="post-date" title="2019-09-12 21:26:46">2019/09/12</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/09/springboot/自定义starter/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-11-09 10:24:28">2019/11/09</span>
+        </a>
+        
+        <a  class="spring "
+           href="/2019/10/31/spring/SpringMVC/"
+           data-tag="spring"
+           data-author="" >
+            <span class="post-title" title="spring mvc">spring mvc</span>
+            <span class="post-date" title="2019-10-31 20:35:33">2019/10/31</span>
+        </a>
+        
+        <a  class="spring "
+           href="/2019/09/12/spring/spring中的设计模式/"
+           data-tag="spring,设计模式"
+           data-author="" >
+            <span class="post-title" title="spring中的设计模式">spring中的设计模式</span>
+            <span class="post-date" title="2019-09-12 21:26:46">2019/09/12</span>
+        </a>
+        
+        <a  class="spring "
+           href="/2019/09/12/spring/Spring组件/"
+           data-tag="spring"
+           data-author="" >
+            <span class="post-title" title="spring组件">spring组件</span>
+            <span class="post-date" title="2019-09-12 21:26:46">2019/09/12</span>
+        </a>
+        
+        <a  class="spring "
+           href="/2019/09/12/spring/AOP底层源码/"
+           data-tag="AOP"
+           data-author="" >
+            <span class="post-title" title="AOP底层源码">AOP底层源码</span>
+            <span class="post-date" title="2019-09-12 21:26:46">2019/09/12</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/18/springcloud/springcloud/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-11-18 19:22:35">2019/11/18</span>
+        </a>
+        
+        <a  class="博客搭建 "
+           href="/2019/09/13/搭建博客/搭建博客/"
+           data-tag="博客搭建"
+           data-author="" >
+            <span class="post-title" title="博客搭建">博客搭建</span>
+            <span class="post-date" title="2019-09-13 10:01:00">2019/09/13</span>
+        </a>
+        
+        <a  class="容器 "
+           href="/2019/10/27/容器/HashMap面试题整理/"
+           data-tag="HashMap"
+           data-author="" >
+            <span class="post-title" title="HashMap面试题整理">HashMap面试题整理</span>
+            <span class="post-date" title="2019-10-27 19:47:28">2019/10/27</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/24/消息队列/消息队列/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-11-24 19:28:29">2019/11/24</span>
+        </a>
+        
+        <a  class="缓存 "
+           href="/2019/09/12/缓存/数据类型/"
+           data-tag="缓存"
+           data-author="" >
+            <span class="post-title" title="redis的数据类型">redis的数据类型</span>
+            <span class="post-date" title="2019-09-12 21:26:46">2019/09/12</span>
+        </a>
+        
+        <a  class="网络 "
+           href="/2019/09/12/网络/网络基础/"
+           data-tag="网络基础"
+           data-author="" >
+            <span class="post-title" title="网络基础">网络基础</span>
+            <span class="post-date" title="2019-09-12 00:00:00">2019/09/12</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/04/面试/Thoughtworks面试经历/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-11-04 18:40:53">2019/11/04</span>
+        </a>
+        
+        <a  class="缓存 "
+           href="/2019/11/25/缓存/缓存/"
+           data-tag="缓存"
+           data-author="" >
+            <span class="post-title" title="缓存">缓存</span>
+            <span class="post-date" title="2019-11-25 21:15:03">2019/11/25</span>
+        </a>
+        
+        <a  class="spring "
+           href="/2019/09/12/spring/transaction/"
+           data-tag="spring"
+           data-author="" >
+            <span class="post-title" title="spring事务">spring事务</span>
+            <span class="post-date" title="2019-09-12 21:26:46">2019/09/12</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/11/26/面试/框架面试题整理/"
+           data-tag="框架,面试题"
+           data-author="" >
+            <span class="post-title" title="框架面试题整理">框架面试题整理</span>
+            <span class="post-date" title="2019-11-26 20:10:56">2019/11/26</span>
+        </a>
+        
+        <a  class="mybatis "
+           href="/2019/09/13/mybatis/mybatis中的设计模式/"
+           data-tag="mybatis"
+           data-author="" >
+            <span class="post-title" title="mybatis设计模式">mybatis设计模式</span>
+            <span class="post-date" title="2019-09-13 10:16:08">2019/09/13</span>
+        </a>
+        
+        <a  class="mybatis "
+           href="/2019/09/25/mybatis/mybatis使用/"
+           data-tag="mybatis"
+           data-author="" >
+            <span class="post-title" title="mybatis使用">mybatis使用</span>
+            <span class="post-date" title="2019-09-25 20:43:07">2019/09/25</span>
+        </a>
+        
+        <a  class="mybatis "
+           href="/2019/09/16/mybatis/mybatis核心流程/"
+           data-tag="mybatis"
+           data-author="" >
+            <span class="post-title" title="mybatis核心流程">mybatis核心流程</span>
+            <span class="post-date" title="2019-09-16 19:43:49">2019/09/16</span>
+        </a>
+        
+        <a  class="设计模式 "
+           href="/2019/09/14/设计模式/代理模式/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="代理模式">代理模式</span>
+            <span class="post-date" title="2019-09-14 19:56:37">2019/09/14</span>
+        </a>
+        
+        <a  class="设计模式 "
+           href="/2019/09/15/设计模式/建造者模式/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="建造者模式">建造者模式</span>
+            <span class="post-date" title="2019-09-15 21:05:07">2019/09/15</span>
+        </a>
+        
+        <a  class="设计模式 "
+           href="/2019/09/19/设计模式/模板模式/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="模板模式">模板模式</span>
+            <span class="post-date" title="2019-09-19 20:57:20">2019/09/19</span>
+        </a>
+        
+        <a  class="设计模式 "
+           href="/2019/09/18/设计模式/策略模式/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="策略模式">策略模式</span>
+            <span class="post-date" title="2019-09-18 22:07:20">2019/09/18</span>
+        </a>
+        
+        <a  class="设计模式 "
+           href="/2019/09/15/设计模式/装饰器模式/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="装饰器模式">装饰器模式</span>
+            <span class="post-date" title="2019-09-15 07:38:10">2019/09/15</span>
+        </a>
+        
+        <a  class="spring "
+           href="/2019/09/12/spring/声明式事务底层源码/"
+           data-tag="spring"
+           data-author="" >
+            <span class="post-title" title="spring声明式事务底层源码">spring声明式事务底层源码</span>
+            <span class="post-date" title="2019-09-12 21:26:46">2019/09/12</span>
+        </a>
+        
+        <a  class="并发编程 "
+           href="/2019/09/17/multiThread/阻塞队列/"
+           data-tag="阻塞队列"
+           data-author="" >
+            <span class="post-title" title="阻塞队列">阻塞队列</span>
+            <span class="post-date" title="2019-09-17 21:16:44">2019/09/17</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-springcloud/springcloud" class="article article-type-post" itemscope itemprop="blogPost">
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-11-23 22:06:23'>2019-11-18 19:22</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、面试题"><span class="toc-text">一、面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-eureka和zookeeper都可以提供服务注册和发现的功能，说下两者的区别"><span class="toc-text">8.eureka和zookeeper都可以提供服务注册和发现的功能，说下两者的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、微服务概述"><span class="toc-text">二、微服务概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、什么是微服务"><span class="toc-text">1、什么是微服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、微服务优缺点"><span class="toc-text">2、微服务优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2、缺点"><span class="toc-text">2、缺点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、学习资料"><span class="toc-text">三、学习资料</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、Spring-Cloud"><span class="toc-text">四、Spring Cloud</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、Eureka"><span class="toc-text">1、Eureka</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、自我保护机制：好死不如赖活着"><span class="toc-text">1、自我保护机制：好死不如赖活着</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、配置"><span class="toc-text">2、配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、Ribbon-客户端负载均衡，进程内LB"><span class="toc-text">2、Ribbon:客户端负载均衡，进程内LB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、负载均衡-Load-Balance"><span class="toc-text">1、负载均衡(Load Balance)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、负载均衡算法"><span class="toc-text">2、负载均衡算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#自定义负载均衡算法"><span class="toc-text">自定义负载均衡算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、feign"><span class="toc-text">3、feign</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、hystrix"><span class="toc-text">4、hystrix</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#服务熔断"><span class="toc-text">服务熔断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务雪崩"><span class="toc-text">服务雪崩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务降级"><span class="toc-text">服务降级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、Zuul"><span class="toc-text">5、Zuul</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、Config"><span class="toc-text">6、Config</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、面试题"><a href="#一、面试题" class="headerlink" title="一、面试题"></a>一、面试题</h1><p>##1.什么是微服务？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>##2.微服务之间是如何独立通讯的？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>##3.springcloud和dubbo有哪些区别？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dubbo：基于RPC,SpringCloud:基于Restful API</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Dubbo</th>
+<th>Spring Cloud</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>服务注册中心</td>
+<td>zookeeper</td>
+<td>eureka</td>
+</tr>
+<tr>
+<td>服务调用方式</td>
+<td>RPC</td>
+<td>RestAPI</td>
+</tr>
+<tr>
+<td>服务监控</td>
+<td>monitor</td>
+<td>Admin</td>
+</tr>
+<tr>
+<td>断路器</td>
+<td>不完善</td>
+<td>Hystrix</td>
+</tr>
+<tr>
+<td>服务网关</td>
+<td>无</td>
+<td>Zuul</td>
+</tr>
+<tr>
+<td>分布式配置</td>
+<td>无</td>
+<td>Config</td>
+</tr>
+<tr>
+<td>服务跟踪</td>
+<td>无</td>
+<td>Sleuth</td>
+</tr>
+<tr>
+<td>消息总线</td>
+<td>无</td>
+<td>Bus</td>
+</tr>
+<tr>
+<td>数据流</td>
+<td>无</td>
+<td>Stream</td>
+</tr>
+<tr>
+<td>批量任务</td>
+<td>无</td>
+<td>Task</td>
+</tr>
+</tbody></table>
+<p>##4.springboot和springcloud，请你谈谈对他们的理解</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>##5.什么是服务熔断？什么是服务降级？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>##6.微服务的优缺点分别是什么？说下你再项目开发中碰到的坑?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>##7.你所知道的微服务技术栈有哪些？请列举一二</p>
+<table>
+<thead>
+<tr>
+<th>微服务条目</th>
+<th>落地技术</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>服务开发</td>
+<td>SpringBoot,Spring,SpringMVC</td>
+<td></td>
+</tr>
+<tr>
+<td>服务配置与管理</td>
+<td>Neflix公司Archaius、阿里的Diamond等</td>
+<td></td>
+</tr>
+<tr>
+<td>服务注册与发现</td>
+<td>Eureka、Consul、Zookeeper等</td>
+<td></td>
+</tr>
+<tr>
+<td>服务调用</td>
+<td>Rest、RPC、gRPC</td>
+<td></td>
+</tr>
+<tr>
+<td>服务熔断器</td>
+<td>Hystrix、Envoy等</td>
+<td></td>
+</tr>
+<tr>
+<td>负载均衡</td>
+<td>Ribbon，nginx等</td>
+<td></td>
+</tr>
+<tr>
+<td>服务接口调用</td>
+<td>feign</td>
+<td></td>
+</tr>
+<tr>
+<td>消息队列</td>
+<td>kafka、RabbitMQ</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="8-eureka和zookeeper都可以提供服务注册和发现的功能，说下两者的区别"><a href="#8-eureka和zookeeper都可以提供服务注册和发现的功能，说下两者的区别" class="headerlink" title="8.eureka和zookeeper都可以提供服务注册和发现的功能，说下两者的区别"></a>8.eureka和zookeeper都可以提供服务注册和发现的功能，说下两者的区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="二、微服务概述"><a href="#二、微服务概述" class="headerlink" title="二、微服务概述"></a>二、微服务概述</h1><h2 id="1、什么是微服务"><a href="#1、什么是微服务" class="headerlink" title="1、什么是微服务"></a>1、什么是微服务</h2><p>将单一的应用程序划分成一组小的服务，每个服务运行在其独立的进程，服务之间互相协调，互相配合。</p>
+<p>服务之间采用轻量级的通信机制进行沟通。</p>
+<p>可以使用不同语言来编写服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">微服务化的核心就是将传统的一站式应用，根据业务拆分成一个个的服务，彻底地去耦合，每一个微服务提供单个业务功能，一个服务做一件事情。从技术角度看就是一种小而独立的处理过程，类似进程的概念，能够自行单独启动或者销毁，拥有自己独立的数据库。</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、微服务优缺点"><a href="#2、微服务优缺点" class="headerlink" title="2、微服务优缺点"></a>2、微服务优缺点</h2><p>###1、优点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、缺点"><a href="#2、缺点" class="headerlink" title="2、缺点"></a>2、缺点</h3><h1 id="三、学习资料"><a href="#三、学习资料" class="headerlink" title="三、学习资料"></a>三、学习资料</h1><p><a href="https://www.springcloud.cc/" target="_blank" rel="noopener">SpringCloud中文网</a></p>
+<p><a href="springcloud.cn">SpringCloud中文社区</a></p>
+<h1 id="四、Spring-Cloud"><a href="#四、Spring-Cloud" class="headerlink" title="四、Spring Cloud"></a>四、Spring Cloud</h1><h2 id="1、Eureka"><a href="#1、Eureka" class="headerlink" title="1、Eureka"></a>1、Eureka</h2><h3 id="1、自我保护机制：好死不如赖活着"><a href="#1、自我保护机制：好死不如赖活着" class="headerlink" title="1、自我保护机制：好死不如赖活着"></a>1、自我保护机制：好死不如赖活着</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">某时刻某一个微服务不可用了，eureka不会立刻清理，依旧会对该微服务的信息进行保存</span><br><span class="line"></span><br><span class="line">默认情况下，EurekaServer在规定时间内没有收到客户端发来的心跳，会将该客户端从服务注册表中删除。但是当一段时间内出现大量的客户端不发送心跳，Eureka就进入自我保护模式，进入自我保护模式后，客户端的信息会被保存下来。</span><br><span class="line"></span><br><span class="line">默认情况下，如果Eureka在一定时间内没有收到某个微服务实例的心跳，EurekaServer将会注销该实例，默认是90秒。但是当网络分区故障时，微服务与EurekaServer之间不能通信，以上行为可能变得非常危险：因为微服务本身是健康的，此时本不应该注销这个微服务。Eureka通过“自我保护机制”来解决这个问题————当EurekaServer节点在短时间内丢失过多的客户端时（可能发生了网络故障），那么这个节点就会进入自我保护模式。一旦进入该模式，EurekaServer就会保护服务注册表中的信息，不会删除服务注册表中的数据（也就是不会注销任何微服务）。当网络故障恢复时，该EurekaServer自动退出自我保护模式。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、配置"><a href="#2、配置" class="headerlink" title="2、配置"></a>2、配置</h3><h2 id="2、Ribbon-客户端负载均衡，进程内LB"><a href="#2、Ribbon-客户端负载均衡，进程内LB" class="headerlink" title="2、Ribbon:客户端负载均衡，进程内LB"></a>2、Ribbon:客户端负载均衡，进程内LB</h2><p>面试题：Ribbon，feign，nginx都可以做负载均衡，区别是什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">feign融合了ribbon</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、负载均衡-Load-Balance"><a href="#1、负载均衡-Load-Balance" class="headerlink" title="1、负载均衡(Load Balance)"></a>1、负载均衡(Load Balance)</h3><p><strong>负载均衡简单说就是将用户的请求平摊的分配到多个服务上，从而达到系统的HA.</strong></p>
+<p>负载均衡分<strong>集中式LB</strong>，<strong>进程内LB</strong></p>
+<p><strong>集中式LB</strong> ： 偏硬件，在服务的消费方和提供方之间使用独立的LB设施（可以是硬件，如F5,也可以是软件，如nginx），由该设施负责把访问请求通过某种策略转发到服务的提供方。</p>
+<p><strong>进程内LB</strong> ：偏软件，将LB逻辑集成到消费方，消费方从服务注册中心获知有哪些地址可用，然后自己再从这些地址中选择出一个合适的服务器。</p>
+<p><strong>Ribbon就属于进程内LB，</strong>它只是一个类库，集成于消费方进程，消费方通过它来获取到服务提供方的地址。</p>
+<h3 id="2、负载均衡算法"><a href="#2、负载均衡算法" class="headerlink" title="2、负载均衡算法"></a>2、负载均衡算法</h3><h4 id="自定义负载均衡算法"><a href="#自定义负载均衡算法" class="headerlink" title="自定义负载均衡算法"></a>自定义负载均衡算法</h4><p><strong>可以作为项目中遇到的坑</strong>：自定义配置类不能放在@ComponentScan所扫描的当前包下以及子包下，否则我们自定义的这个配置类就会被所有的Ribbon客户端所共享，也就是说我们达不到特殊定制化的目的。</p>
+<h2 id="3、feign"><a href="#3、feign" class="headerlink" title="3、feign"></a>3、feign</h2><h2 id="4、hystrix"><a href="#4、hystrix" class="headerlink" title="4、hystrix"></a>4、hystrix</h2><h3 id="服务熔断"><a href="#服务熔断" class="headerlink" title="服务熔断"></a>服务熔断</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">多个微服务有依赖关系，其中一个微服务挂掉，为了避免影响依赖于这个微服务的其他微服务，需要使用服务熔断。</span><br><span class="line"></span><br><span class="line">一般是某个服务故障或异常引起，类似现实世界中的“保险丝”，当某个异常条件被触发时，直接熔断整个服务，而不是一直等到此服务超时。</span><br></pre></td></tr></table></figure>
+
+<h3 id="服务雪崩"><a href="#服务雪崩" class="headerlink" title="服务雪崩"></a>服务雪崩</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="服务降级"><a href="#服务降级" class="headerlink" title="服务降级"></a>服务降级</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">整体资源快不够了，忍痛将某些服务先关掉，待度过难关，再重启回来。</span><br><span class="line"></span><br><span class="line">服务降级是在客户端完成的，与服务端没有关系。</span><br><span class="line"></span><br><span class="line">所谓降级，一般是从整体负荷考虑，就是当某个服务熔断之后，服务器将不再被调用，此时客户端可以自己装一个本地的fallback回调，返回一个缺省值。这样做，虽然服务水平下降，单好歹可用，比直接挂掉要强。</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>@HystrixCommond</p>
+<p>@EnableCircuitBreaker</p>
+<h2 id="5、Zuul"><a href="#5、Zuul" class="headerlink" title="5、Zuul"></a>5、Zuul</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请求的路由和过滤</span><br></pre></td></tr></table></figure>
+
+<p>@EnableZuulProxy</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">zuul:</span><br><span class="line"> prefix: /atguigu                           #统一前缀</span><br><span class="line"> ignored-services: microservicecloud-dept  #屏蔽真实名称</span><br><span class="line"> # ignored-services: &quot;*&quot;    #屏蔽所有的真实名称</span><br><span class="line"> routes:</span><br><span class="line">  mydept.serviceId: microservicecloud-dept</span><br><span class="line">  mydept.path: /mydept/**</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、Config"><a href="#6、Config" class="headerlink" title="6、Config"></a>6、Config</h2><p>作用：</p>
+<p>1.集中管理文件</p>
+<p>2.不同环境不同配置，动态化的配置更新，分环境部署</p>
+<p>3.运行期间动态调整配置，不再需要在每个服务部署的机器上编写配置文件，服务会向配置中心统一拉取配置自己的信息</p>
+<p>4.当配置发生变动时，服务不需要重启即可感知配置的变化并应用新的配置</p>
+<p>5.将配置以REST接口的形式暴露</p>
+<p><strong>application.yml和bootstrap.yml</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">application.yml是用户级的资源配置项</span><br><span class="line">bootstrap.yml是系统级的，优先级更加高</span><br></pre></td></tr></table></figure>
+
+<p>Devops:开发自运维</p>
+<p>图片存储：FastFS</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 362282097@qq.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 zyl</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#JDK的命令行工具','#面试题','#JVM参数','#内存溢出','#java基础','#线程','#mybatis','#异常','#mysql','#spring','#设计模式','#AOP','#博客搭建','#HashMap','#缓存','#网络基础','#框架,面试题','#阻塞队列',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
