@@ -2,22 +2,25 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>张永亮&#39;s 博客</title>
-  <meta name="keywords" content>
-  <meta name="description" content="张永亮&#39;s 博客">
+  <title>linux常用命令 | 张永亮&#39;s 博客</title>
+  <meta name="keywords" content=" linux ">
+  <meta name="description" content="linux常用命令 | 张永亮&#39;s 博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Mybatis1、Mybatis和Hibernate的区别？    Mybatis Hibernate    ORM 半自动 全自动   SQL 需要手写sql 只需要配置表和实体的映射   优点 灵活，学习快 不需要写sql，跨平台   缺点 需要写sql，不跨平台 不够灵活，学习难度高             ##2、#{}和${}的区别 3、Spring1、Spring有哪些模块？##2、动">
-<meta name="keywords" content="框架,面试题">
+<meta name="description" content="一、使用场景（解耦、异步、削峰）##1.应用解耦合 不使用消息队列：  ##2.服务通信 ##3.异步任务 ##4.削峰填谷 ##5.消息广播 二、消息协议1、JMS基于JVM消息代理的规范。 2、AMQP高级消息队列协议，也是一个消息代理的规范，兼容JMS 比较：JMS:仅支持java，不跨语言 AMQP:跨语言     定义 跨平台，跨语言 Model  实现    JMS java api">
 <meta property="og:type" content="article">
-<meta property="og:title" content="框架面试题整理">
-<meta property="og:url" content="http://zyl432.github.io/2019/11/26/面试/框架面试题整理/index.html">
+<meta property="og:title" content="张永亮&#39;s 博客">
+<meta property="og:url" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/index.html">
 <meta property="og:site_name" content="张永亮&#39;s 博客">
-<meta property="og:description" content="Mybatis1、Mybatis和Hibernate的区别？    Mybatis Hibernate    ORM 半自动 全自动   SQL 需要手写sql 只需要配置表和实体的映射   优点 灵活，学习快 不需要写sql，跨平台   缺点 需要写sql，不跨平台 不够灵活，学习难度高             ##2、#{}和${}的区别 3、Spring1、Spring有哪些模块？##2、动">
+<meta property="og:description" content="一、使用场景（解耦、异步、削峰）##1.应用解耦合 不使用消息队列：  ##2.服务通信 ##3.异步任务 ##4.削峰填谷 ##5.消息广播 二、消息协议1、JMS基于JVM消息代理的规范。 2、AMQP高级消息队列协议，也是一个消息代理的规范，兼容JMS 比较：JMS:仅支持java，不跨语言 AMQP:跨语言     定义 跨平台，跨语言 Model  实现    JMS java api">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-26T14:31:00.846Z">
+<meta property="og:image" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/images/mq-1.png">
+<meta property="og:image" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/images/exchange-direct.png">
+<meta property="og:image" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/images/exchange-fanout.png">
+<meta property="og:updated_time" content="2019-12-02T14:46:49.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="框架面试题整理">
-<meta name="twitter:description" content="Mybatis1、Mybatis和Hibernate的区别？    Mybatis Hibernate    ORM 半自动 全自动   SQL 需要手写sql 只需要配置表和实体的映射   优点 灵活，学习快 不需要写sql，跨平台   缺点 需要写sql，不跨平台 不够灵活，学习难度高             ##2、#{}和${}的区别 3、Spring1、Spring有哪些模块？##2、动">
+<meta name="twitter:title" content="张永亮&#39;s 博客">
+<meta name="twitter:description" content="一、使用场景（解耦、异步、削峰）##1.应用解耦合 不使用消息队列：  ##2.服务通信 ##3.异步任务 ##4.削峰填谷 ##5.消息广播 二、消息协议1、JMS基于JVM消息代理的规范。 2、AMQP高级消息队列协议，也是一个消息代理的规范，兼容JMS 比较：JMS:仅支持java，不跨语言 AMQP:跨语言     定义 跨平台，跨语言 Model  实现    JMS java api">
+<meta name="twitter:image" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/images/mq-1.png">
 
 
 <link rel="icon" href="/img/5945805.jpg">
@@ -168,6 +171,14 @@
             
         
     
+        
+            
+            <li><div data-rel="linux">linux<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -282,6 +293,10 @@
         <a href="javascript:" class="color5">阻塞队列</a>
     </li>
     
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
     <div class="clearfix"></div>
 </div>
 
@@ -320,11 +335,11 @@
             <span class="post-date" title="2019-10-28 19:42:39">2019/10/28</span>
         </a>
         
-        <a  class=""
+        <a  class="linux "
            href="/2019/11/13/linux/命令/"
-           data-tag=""
+           data-tag="linux"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="linux常用命令">linux常用命令</span>
             <span class="post-date" title="2019-11-13 22:07:11">2019/11/13</span>
         </a>
         
@@ -590,15 +605,29 @@
     <div class="pjax">
         <article id="post-linux/命令" class="article article-type-post" itemscope itemprop="blogPost">
     
+        <h1 class="article-title">linux常用命令</h1>
+    
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a href="javascript:" data-rel="linux">linux</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color1">linux</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-11-13 22:07:11'>2019-11-13 22:07</time>
+        创建时间:<time class="date" title='更新时间: 2019-11-30 20:20:14'>2019-11-13 22:07</time>
         
     </div>
     <div class="article-meta">
@@ -620,7 +649,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1、系统相关"><span class="toc-text">1、系统相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、uname-r"><span class="toc-text">1、uname -r</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、yum-update"><span class="toc-text">2、yum update</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1、uname-r"><span class="toc-text">1、uname -r</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2、yum-update"><span class="toc-text">2、yum update</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3、awk"><span class="toc-text">3、awk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4、top"><span class="toc-text">4、top</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5、netstat"><span class="toc-text">5、netstat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6、grep"><span class="toc-text">6、grep</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7、less"><span class="toc-text">7、less</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8、tail"><span class="toc-text">8、tail</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -635,9 +664,9 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1、系统相关"><a href="#1、系统相关" class="headerlink" title="1、系统相关"></a>1、系统相关</h1><h2 id="1、uname-r"><a href="#1、uname-r" class="headerlink" title="1、uname -r"></a>1、uname -r</h2><p>查看内核版本</p>
-<h2 id="2、yum-update"><a href="#2、yum-update" class="headerlink" title="2、yum update"></a>2、yum update</h2><p>升级内核</p>
-
+        <h1 id="1、uname-r"><a href="#1、uname-r" class="headerlink" title="1、uname -r"></a>1、uname -r</h1><p>查看内核版本</p>
+<h1 id="2、yum-update"><a href="#2、yum-update" class="headerlink" title="2、yum update"></a>2、yum update</h1><p>升级内核</p>
+<h1 id="3、awk"><a href="#3、awk" class="headerlink" title="3、awk"></a>3、awk</h1><h1 id="4、top"><a href="#4、top" class="headerlink" title="4、top"></a>4、top</h1><h1 id="5、netstat"><a href="#5、netstat" class="headerlink" title="5、netstat"></a>5、netstat</h1><h1 id="6、grep"><a href="#6、grep" class="headerlink" title="6、grep"></a>6、grep</h1><h1 id="7、less"><a href="#7、less" class="headerlink" title="7、less"></a>7、less</h1><h1 id="8、tail"><a href="#8、tail" class="headerlink" title="8、tail"></a>8、tail</h1>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 362282097@qq.com </span>
     </div>
@@ -682,7 +711,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#JDK的命令行工具','#面试题','#JVM参数','#内存溢出','#java基础','#线程','#mybatis','#异常','#mysql','#spring','#设计模式','#AOP','#博客搭建','#HashMap','#缓存','#网络基础','#框架,面试题','#阻塞队列',],
+            'data': ['#JDK的命令行工具','#面试题','#JVM参数','#内存溢出','#java基础','#线程','#mybatis','#异常','#mysql','#spring','#设计模式','#AOP','#博客搭建','#HashMap','#缓存','#网络基础','#框架,面试题','#阻塞队列','#linux',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

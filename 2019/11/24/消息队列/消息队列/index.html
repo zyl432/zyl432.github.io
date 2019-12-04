@@ -6,18 +6,21 @@
   <meta name="keywords" content>
   <meta name="description" content="张永亮&#39;s 博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Mybatis1、Mybatis和Hibernate的区别？    Mybatis Hibernate    ORM 半自动 全自动   SQL 需要手写sql 只需要配置表和实体的映射   优点 灵活，学习快 不需要写sql，跨平台   缺点 需要写sql，不跨平台 不够灵活，学习难度高             ##2、#{}和${}的区别 3、Spring1、Spring有哪些模块？##2、动">
-<meta name="keywords" content="框架,面试题">
+<meta name="description" content="一、使用场景（解耦、异步、削峰）##1.应用解耦合 不使用消息队列：  ##2.服务通信 ##3.异步任务 ##4.削峰填谷 ##5.消息广播 二、消息协议1、JMS基于JVM消息代理的规范。 2、AMQP高级消息队列协议，也是一个消息代理的规范，兼容JMS 比较：JMS:仅支持java，不跨语言 AMQP:跨语言     定义 跨平台，跨语言 Model  实现    JMS java api">
 <meta property="og:type" content="article">
-<meta property="og:title" content="框架面试题整理">
-<meta property="og:url" content="http://zyl432.github.io/2019/11/26/面试/框架面试题整理/index.html">
+<meta property="og:title" content="张永亮&#39;s 博客">
+<meta property="og:url" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/index.html">
 <meta property="og:site_name" content="张永亮&#39;s 博客">
-<meta property="og:description" content="Mybatis1、Mybatis和Hibernate的区别？    Mybatis Hibernate    ORM 半自动 全自动   SQL 需要手写sql 只需要配置表和实体的映射   优点 灵活，学习快 不需要写sql，跨平台   缺点 需要写sql，不跨平台 不够灵活，学习难度高             ##2、#{}和${}的区别 3、Spring1、Spring有哪些模块？##2、动">
+<meta property="og:description" content="一、使用场景（解耦、异步、削峰）##1.应用解耦合 不使用消息队列：  ##2.服务通信 ##3.异步任务 ##4.削峰填谷 ##5.消息广播 二、消息协议1、JMS基于JVM消息代理的规范。 2、AMQP高级消息队列协议，也是一个消息代理的规范，兼容JMS 比较：JMS:仅支持java，不跨语言 AMQP:跨语言     定义 跨平台，跨语言 Model  实现    JMS java api">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-26T14:31:00.846Z">
+<meta property="og:image" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/images/mq-1.png">
+<meta property="og:image" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/images/exchange-direct.png">
+<meta property="og:image" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/images/exchange-fanout.png">
+<meta property="og:updated_time" content="2019-12-02T14:46:49.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="框架面试题整理">
-<meta name="twitter:description" content="Mybatis1、Mybatis和Hibernate的区别？    Mybatis Hibernate    ORM 半自动 全自动   SQL 需要手写sql 只需要配置表和实体的映射   优点 灵活，学习快 不需要写sql，跨平台   缺点 需要写sql，不跨平台 不够灵活，学习难度高             ##2、#{}和${}的区别 3、Spring1、Spring有哪些模块？##2、动">
+<meta name="twitter:title" content="张永亮&#39;s 博客">
+<meta name="twitter:description" content="一、使用场景（解耦、异步、削峰）##1.应用解耦合 不使用消息队列：  ##2.服务通信 ##3.异步任务 ##4.削峰填谷 ##5.消息广播 二、消息协议1、JMS基于JVM消息代理的规范。 2、AMQP高级消息队列协议，也是一个消息代理的规范，兼容JMS 比较：JMS:仅支持java，不跨语言 AMQP:跨语言     定义 跨平台，跨语言 Model  实现    JMS java api">
+<meta name="twitter:image" content="http://zyl432.github.io/2019/11/24/消息队列/消息队列/images/mq-1.png">
 
 
 <link rel="icon" href="/img/5945805.jpg">
@@ -168,6 +171,14 @@
             
         
     
+        
+            
+            <li><div data-rel="linux">linux<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -282,6 +293,10 @@
         <a href="javascript:" class="color5">阻塞队列</a>
     </li>
     
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
     <div class="clearfix"></div>
 </div>
 
@@ -320,11 +335,11 @@
             <span class="post-date" title="2019-10-28 19:42:39">2019/10/28</span>
         </a>
         
-        <a  class=""
+        <a  class="linux "
            href="/2019/11/13/linux/命令/"
-           data-tag=""
+           data-tag="linux"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="linux常用命令">linux常用命令</span>
             <span class="post-date" title="2019-11-13 22:07:11">2019/11/13</span>
         </a>
         
@@ -598,7 +613,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-11-28 20:07:24'>2019-11-24 19:28</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-02 22:46:49'>2019-11-24 19:28</time>
         
     </div>
     <div class="article-meta">
@@ -620,7 +635,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、使用场景（解耦、异步、削峰）"><span class="toc-text">一、使用场景（解耦、异步、削峰）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、消息协议"><span class="toc-text">二、消息协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、JMS"><span class="toc-text">1、JMS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、AMQP"><span class="toc-text">2、AMQP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#比较："><span class="toc-text">比较：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、常用的消息队列"><span class="toc-text">三、常用的消息队列</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Exchange"><span class="toc-text">Exchange</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Queue"><span class="toc-text">Queue:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Binding"><span class="toc-text">Binding</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Connection"><span class="toc-text">Connection</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Channel"><span class="toc-text">Channel</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Consumer"><span class="toc-text">Consumer</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#direct-按照键值匹配"><span class="toc-text">direct:按照键值匹配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fanout"><span class="toc-text">fanout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#topic"><span class="toc-text">topic</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#headers"><span class="toc-text">headers</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、ActiveMQ"><span class="toc-text">2、ActiveMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、RocketMQ"><span class="toc-text">3、RocketMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、Kafka"><span class="toc-text">4、Kafka</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#比较：-1"><span class="toc-text">比较：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、你系统的中的使用场景？"><span class="toc-text">五、你系统的中的使用场景？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、消息服务中的概念"><span class="toc-text">六、消息服务中的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、消息代理（message-broker）"><span class="toc-text">1、消息代理（message broker）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、目的地（destination）"><span class="toc-text">2、目的地（destination）</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、使用场景（解耦、异步、削峰）"><span class="toc-text">一、使用场景（解耦、异步、削峰）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、消息协议"><span class="toc-text">二、消息协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、JMS"><span class="toc-text">1、JMS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、AMQP"><span class="toc-text">2、AMQP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#比较："><span class="toc-text">比较：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、常用的消息队列"><span class="toc-text">三、常用的消息队列</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Exchange"><span class="toc-text">Exchange</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Queue"><span class="toc-text">Queue:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Binding："><span class="toc-text">Binding：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Connection"><span class="toc-text">Connection</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Channel"><span class="toc-text">Channel</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Consumer"><span class="toc-text">Consumer</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#direct-按照键值匹配"><span class="toc-text">direct:按照键值匹配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fanout"><span class="toc-text">fanout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#topic"><span class="toc-text">topic</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#headers"><span class="toc-text">headers</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、高可用"><span class="toc-text">4、高可用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、ActiveMQ"><span class="toc-text">2、ActiveMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、RocketMQ"><span class="toc-text">3、RocketMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、Kafka"><span class="toc-text">4、Kafka</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#比较：-1"><span class="toc-text">比较：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、你系统的中的使用场景？"><span class="toc-text">五、你系统的中的使用场景？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、消息服务中的概念"><span class="toc-text">六、消息服务中的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、消息代理（message-broker）"><span class="toc-text">1、消息代理（message broker）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、目的地（destination）"><span class="toc-text">2、目的地（destination）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、可靠性实现"><span class="toc-text">七、可靠性实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、什么是生产端的可靠性投递？"><span class="toc-text">1、什么是生产端的可靠性投递？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、生产端-可靠性投递"><span class="toc-text">2、生产端-可靠性投递</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -686,11 +701,19 @@
 <p>#####Message:</p>
 <p>#####Virtual Host:</p>
 <p>#####Publisher</p>
-<h5 id="Exchange"><a href="#Exchange" class="headerlink" title="Exchange"></a>Exchange</h5><h5 id="Queue"><a href="#Queue" class="headerlink" title="Queue:"></a>Queue:</h5><h5 id="Binding"><a href="#Binding" class="headerlink" title="Binding"></a>Binding</h5><h5 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h5><h5 id="Channel"><a href="#Channel" class="headerlink" title="Channel"></a>Channel</h5><h5 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h5><p>#####Broker</p>
+<h5 id="Exchange"><a href="#Exchange" class="headerlink" title="Exchange"></a>Exchange</h5><h5 id="Queue"><a href="#Queue" class="headerlink" title="Queue:"></a>Queue:</h5><h5 id="Binding："><a href="#Binding：" class="headerlink" title="Binding："></a>Binding：</h5><p>路由key写法，order.#和order.*的区别：</p>
+<p>order.#  ： 可以匹配多级</p>
+<p>order.*   ： 只能匹配一个点</p>
+<h5 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h5><h5 id="Channel"><a href="#Channel" class="headerlink" title="Channel"></a>Channel</h5><h5 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h5><p>#####Broker</p>
 <p>###3、Exchange类型</p>
 <h4 id="direct-按照键值匹配"><a href="#direct-按照键值匹配" class="headerlink" title="direct:按照键值匹配"></a>direct:按照键值匹配</h4><p><img src="images/exchange-direct.png" alt></p>
 <h4 id="fanout"><a href="#fanout" class="headerlink" title="fanout"></a>fanout</h4><p><img src="images/exchange-fanout.png" alt></p>
-<h4 id="topic"><a href="#topic" class="headerlink" title="topic"></a>topic</h4><h4 id="headers"><a href="#headers" class="headerlink" title="headers"></a>headers</h4><h2 id="2、ActiveMQ"><a href="#2、ActiveMQ" class="headerlink" title="2、ActiveMQ"></a>2、ActiveMQ</h2><h2 id="3、RocketMQ"><a href="#3、RocketMQ" class="headerlink" title="3、RocketMQ"></a>3、RocketMQ</h2><h2 id="4、Kafka"><a href="#4、Kafka" class="headerlink" title="4、Kafka"></a>4、Kafka</h2><h2 id="比较：-1"><a href="#比较：-1" class="headerlink" title="比较："></a>比较：</h2><table>
+<h4 id="topic"><a href="#topic" class="headerlink" title="topic"></a>topic</h4><h4 id="headers"><a href="#headers" class="headerlink" title="headers"></a>headers</h4><h3 id="4、高可用"><a href="#4、高可用" class="headerlink" title="4、高可用"></a>4、高可用</h3><p>rabbitmq有三种模式：单机模式，普通集群模式，镜像集群模式</p>
+<p>1）单机模式</p>
+<p>2）普通集群模式</p>
+<p>多个实例，只有一个有数据，其他节点都要从有数据的节点拉取数据，不能实现高可用，只能提高吞吐量。</p>
+<p>3）镜像集群模式</p>
+<h2 id="2、ActiveMQ"><a href="#2、ActiveMQ" class="headerlink" title="2、ActiveMQ"></a>2、ActiveMQ</h2><h2 id="3、RocketMQ"><a href="#3、RocketMQ" class="headerlink" title="3、RocketMQ"></a>3、RocketMQ</h2><h2 id="4、Kafka"><a href="#4、Kafka" class="headerlink" title="4、Kafka"></a>4、Kafka</h2><h2 id="比较：-1"><a href="#比较：-1" class="headerlink" title="比较："></a>比较：</h2><table>
 <thead>
 <tr>
 <th>消息队列\特性</th>
@@ -699,49 +722,54 @@
 <th>时效性</th>
 <th>可用性</th>
 <th>消息可靠性</th>
-<th></th>
+<th>备注</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>ActiveMQ</td>
 <td>1w+，比RocketMQ、Kafka低一个数量级</td>
 <td></td>
-<td></td>
+<td>ms</td>
 <td>高，基于主从架构实现高可用</td>
 <td><strong>有较低的概率丢失数据</strong></td>
-<td></td>
+<td>社区不活跃</td>
 </tr>
 <tr>
 <td>RabbitMQ</td>
 <td>1w+</td>
 <td></td>
-<td></td>
+<td><strong>微秒，使用erlang开发，时效性最好</strong></td>
 <td>高，基于主从架构实现高可用</td>
 <td>基本不丢</td>
-<td></td>
+<td>erlang开发</td>
 </tr>
 <tr>
 <td>RocketMQ</td>
 <td>10w+,支持高吞吐</td>
 <td></td>
-<td></td>
+<td>ms</td>
 <td>非常高，分布式架构</td>
 <td>经过参数优化配置，可以做到0丢失</td>
-<td></td>
+<td>阿里开源项目；</td>
 </tr>
 <tr>
 <td>Kafka</td>
 <td>10w+,支持高吞吐，一般配合大数据类的系统进行实时数据计算、日志采集等场景</td>
 <td></td>
-<td></td>
+<td>ms</td>
 <td>非常高，一个数据多个副本，少数机器宕机，不会丢失数据，不会导致不可用</td>
 <td>经过参数优化配置，可以做到0丢失</td>
-<td></td>
+<td>大数据领域</td>
 </tr>
 </tbody></table>
 <p>#四、面试题</p>
 <p>1.为什么使用消息队列？</p>
 <p>2.消息队列有什么优点和缺点？</p>
+<p>优点：解耦，异步，削峰</p>
+<p>缺点：</p>
+<p>可用性降低：MQ出现故障，导致系统不可用</p>
+<p>复杂性提高：</p>
+<p>一致性问题：</p>
 <p>3.kafka、activeMQ、rabbitMQ,rocketMQ都有什么优点和缺点，以及适合哪些场景？</p>
 <h1 id="五、你系统的中的使用场景？"><a href="#五、你系统的中的使用场景？" class="headerlink" title="五、你系统的中的使用场景？"></a>五、你系统的中的使用场景？</h1><p>发送注册邮件</p>
 <p>发送注册短信</p>
@@ -749,6 +777,12 @@
 <p>目的地有两种形式：</p>
 <p>1）.队列（queue）：点对点消息通信</p>
 <p>2）.主题（topic）：发布/订阅</p>
+<h1 id="七、可靠性实现"><a href="#七、可靠性实现" class="headerlink" title="七、可靠性实现"></a>七、可靠性实现</h1><h2 id="1、什么是生产端的可靠性投递？"><a href="#1、什么是生产端的可靠性投递？" class="headerlink" title="1、什么是生产端的可靠性投递？"></a>1、什么是生产端的可靠性投递？</h2><p>1）保障消息的成功发出</p>
+<p>2）保障MQ节点的成功接收</p>
+<p>3）发送端收到MQ节点（Broker）确认应答</p>
+<p>4）完善的消息补偿机制</p>
+<h2 id="2、生产端-可靠性投递"><a href="#2、生产端-可靠性投递" class="headerlink" title="2、生产端-可靠性投递"></a>2、生产端-可靠性投递</h2><p>1）消息落库，对消息状态进行达标</p>
+<p>2）消息的延迟投递，做二次确认，回调检查</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 362282097@qq.com </span>
@@ -794,7 +828,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#JDK的命令行工具','#面试题','#JVM参数','#内存溢出','#java基础','#线程','#mybatis','#异常','#mysql','#spring','#设计模式','#AOP','#博客搭建','#HashMap','#缓存','#网络基础','#框架,面试题','#阻塞队列',],
+            'data': ['#JDK的命令行工具','#面试题','#JVM参数','#内存溢出','#java基础','#线程','#mybatis','#异常','#mysql','#spring','#设计模式','#AOP','#博客搭建','#HashMap','#缓存','#网络基础','#框架,面试题','#阻塞队列','#linux',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
