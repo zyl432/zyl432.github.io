@@ -1,0 +1,10 @@
+---
+title: spring组件
+tags: 
+- spring
+categories:
+- spring
+---
+
+BeanFactoryPostProcessor：beanFactory的后置处理器
+BeanDefinitionRegistryPostProcessor:bean定义后置处理器
