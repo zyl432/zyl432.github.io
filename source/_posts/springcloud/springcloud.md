@@ -131,11 +131,15 @@ dubbo：基于RPC,SpringCloud:基于Restful API
 
 ```
 
-
-
 ### 2、配置
 
+### 3、eureka属于客户端发现
 
+eureka属于客户端服务发现，
+
+nginx，zookeeper，k8s属于服务端发现
+
+服务端发现的组件会作为代理使用
 
 ## 2、Ribbon:客户端负载均衡，进程内LB
 
@@ -166,6 +170,8 @@ feign融合了ribbon
 ## 3、feign
 
 ## 4、hystrix
+
+hystrix是在客户端调用的
 
 ### 服务熔断
 
